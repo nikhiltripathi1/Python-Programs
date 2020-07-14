@@ -1,0 +1,11 @@
+def solution(l):
+    c=[0]*len(l)
+    count=0
+    for i in range(len(l)):
+        for j in range(i):
+            if l[i]%l[j]==0:
+                c[i]=c[i]+1
+                count=count+c[j]
+    return count
+k=solution([i for i in range(1,2001)])
+print(k)
